@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-# Ganti datanya disini yaa
+# Ubah sesuai kebutuhan yaa
 data = [51.7, 52.9, 50.5, 51.3, 52.1, 51.5, 53.3, 51.8, 52.3, 53.0, 51.5, 50.7, 53.1, 52.4, 51.5, 50.5,
 51.8, 52.3, 53.0, 52.3, 51.2, 51.6, 51.7, 52.0]
 
@@ -43,9 +43,9 @@ if len(semua_modus) > 1:
     print("Distribusi simetris")
 else:
     if sum(data)/len(data) > median:
-        print("Positively skewed");
+        print("Positively skewed")
     else:
-        print("Negatively skewed");
+        print("Negatively skewed")
 
 # Tabel Proporsi
 print("\nTabel Proporsi")
@@ -56,6 +56,7 @@ for k,v in sorted(freq.items()):
     print(f"{k}\t\t{v}\t\t{(v/total_freq):.3f}")
 print("-" * 50)
 
+# Ubah sesuai kebutuhan yaa
 # Tabel Persentase untuk nilai > 52.1
 print("\nTabel Persentase (Nilai > 52.1)")
 print("-" * 50)
@@ -66,11 +67,13 @@ for k,v in sorted(freq.items()):
         print(f"{k}\t\t{v}\t\t{(v/total_freq*100):.3f}%")
 print("-" * 50)
 
+# Ubah interval sesuai kebutuhan yaa
 print("\nTabel Distribusi Frekuensi Berkelompok (interval 0.8)")
 print("-" * 35)
 print("Kelas\t\tFrekuensi")
 print("-" * 35)
 
+# Ubah interval sesuai kebutuhan yaa
 intervals = [
     (50.5, 51.3),
     (51.4, 52.2),
@@ -86,12 +89,15 @@ for bawah, atas in intervals:
 print("-" * 35)
 print(f"Total\t\t{len(data)}")
 
+# Ubah interval sesuai kebutuhan yaa
 # Membuat data baru dengan mengganti 51.2 menjadi 53.1
 data_baru = [53.1 if x == 51.2 else x for x in data]
 
+# Ubah interval sesuai kebutuhan yaa
 # Mengaplikasikan transformasi (x*2 + 10) pada setiap data
 data_transform = [x*2 + 10 for x in data_baru]
 
+# Ubah interval sesuai kebutuhan yaa
 # Tabel Transformasi Data
 print("\nTabel Transformasi Data")
 print("-" * 60)
@@ -106,6 +112,7 @@ print(f"Rata-rata:\t{sum(data)/len(data):.3f}\t\t{sum(data_transform)/len(data_t
 print(f"Jumlah data setelah transformasi: {len(data_transform)}")
 print(f"Rata-rata data setelah transformasi (x*2 + 10): {sum(data_transform)/len(data_transform):.3f}")
 
+# Histogram
 plt.figure(figsize=(10, 6))
 kelas = [f"{bawah:.1f}-{atas:.1f}" for bawah, atas in intervals]
 frekuensi = [sum(1 for x in data if bawah <= x <= atas) for bawah, atas in intervals]

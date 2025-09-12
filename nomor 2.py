@@ -1,3 +1,5 @@
+# CARI KALIMAT UBAH SESUAI KEBUTUHAN UNTUK MENGUBAH DATA SESUAI SOAL VARIASI
+
 import matplotlib.pyplot as plt
 
 # Ubah sesuai kebutuhan yaa

@@ -39,7 +39,13 @@ max_freq = max(freq.values())
 semua_modus = [k for k,v in freq.items() if v == max_freq]
 print(f"Modus data: {semua_modus} dengan frekuensi {max_freq}")
 
-print()
+if len(semua_modus) > 1:
+    print("Distribusi simetris")
+else:
+    if sum(data)/len(data) > median:
+        print("Positively skewed");
+    else:
+        print("Negatively skewed");
 
 # Tabel Proporsi
 print("\nTabel Proporsi")

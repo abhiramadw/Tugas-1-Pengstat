@@ -3,6 +3,7 @@
 data = [62, 77, 68, 83, 55, 91, 74, 66, 80, 72, 88, 59, 93, 71, 64, 85, 79, 58, 87, 69]
 
 mean = sum(data)/len(data)
+print(f"Mean adalah {mean:.3f} dengan sum data {sum(data)} dan jumlah data {len(data)}")
 ss = 0
 for x in range(len(data)):
     ss += (data[x]-mean)**2

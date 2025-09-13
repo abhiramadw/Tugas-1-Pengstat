@@ -114,6 +114,32 @@ print(f"Rata-rata:\t{sum(data)/len(data):.3f}\t\t{sum(data_transform)/len(data_t
 print(f"Jumlah data setelah transformasi: {len(data_transform)}")
 print(f"Rata-rata data setelah transformasi (x*2 + 10): {sum(data_transform)/len(data_transform):.3f}")
 
+# Perhitungan sebelum transformasi linear
+print("\nPerubahan Data (51.2 → 53.1)")
+print("-" * 60)
+n = len(data)
+sum_raw = sum(data)
+mean_awal = sum_raw/n
+
+# Menghitung sum dan mean setelah mengubah 51.2 menjadi 53.1
+sum_after_change = sum_raw - 51.2 + 53.1  # kurangi nilai lama, tambah nilai baru
+mean_after_change = sum_after_change/n
+
+print(f"Sum sebelum perubahan: {sum_raw}")
+print(f"Mean sebelum perubahan: {mean_awal:.3f}")
+print(f"Sum setelah 51.2 → 53.1: {sum_after_change}")
+print(f"Mean setelah perubahan: {mean_after_change:.3f}")
+
+# Untuk transformasi (x*2 + 10):
+sum_transform = sum_after_change*2 + (10*n)  # menggunakan sum setelah perubahan
+mean_transform = sum_transform/n
+
+print(f"\nTransformasi (x*2 + 10):")
+print(f"Sum after transform: {sum_transform}")
+print(f"Mean after transform: {mean_transform:.3f}")
+print(f"Verifikasi: (mean after change * 2) + 10 = {(mean_after_change*2 + 10):.3f}")
+print("-" * 60)
+
 # Histogram
 plt.figure(figsize=(10, 6))
 kelas = [f"{bawah:.1f}-{atas:.1f}" for bawah, atas in intervals]
